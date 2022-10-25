@@ -93,4 +93,15 @@ public class Picture
             sun.changeColor("yellow");
         }
     }
+    
+    /**
+     * bajada del sol
+     */
+    public void atardecer()
+    {
+         if (sun != null)  // only if draw is used already ...
+        {
+            sun.slowMoveVertical(80);
+        }
+    }
 }
