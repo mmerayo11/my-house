@@ -11,10 +11,12 @@
  */
 public class Picture
 {
+    private Square grass;
     private Square wall;
     private Square window;
     private Triangle roof;
     private Circle sun;
+    
 
     /**
      * Constructor for objects of class Picture
@@ -29,6 +31,13 @@ public class Picture
      */
     public void draw()
     {
+        grass = new Square();
+        grass.changeColor("green");
+        grass.moveHorizontal(-600);
+        grass.moveVertical(100);
+        grass.changeSize(1000);
+        grass.makeVisible();
+        
         wall = new Square();
         wall.moveHorizontal(-140);
         wall.moveVertical(20);
@@ -51,9 +60,10 @@ public class Picture
         sun = new Circle();
         sun.changeColor("yellow");
         sun.moveHorizontal(100);
-        sun.moveVertical(-40);
+        sun.moveVertical(40);
         sun.changeSize(80);
         sun.makeVisible();
+        sun.slowMoveVertical(-80);
     }
 
     /**
