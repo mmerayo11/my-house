@@ -16,7 +16,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
-    
+    private Person Mario; 
 
     /**
      * Constructor for objects of class Picture
@@ -64,6 +64,11 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();
         sun.slowMoveVertical(-80);
+        
+        Mario = new Person();
+        Mario.moveHorizontal(-300);
+        Mario.makeVisible();
+        
     }
 
     /**
@@ -103,5 +108,11 @@ public class Picture
         {
             sun.slowMoveVertical(80);
         }
+         if (Mario != null) // only when sun is down ...
+         {
+             Mario.slowMoveHorizontal(130);
+         }
+    
+    
     }
 }
